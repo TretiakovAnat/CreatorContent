@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Content Creator</title>
+		<meta
+			name="description"
+			content="Контент зйомка, основними напрямками у роботі є beauty та food зйомки.Моя задача - закохати у ваш бренд якомога більше людей за допомогою
+    відео. "
+		/>
+		<meta property="og:title" content="Content Creator" />
+		<meta property="og:image:type" content="image/webp" />
+		<meta property="og:image" content="https://content-creator.space/img/photo-19.webp" />
+		<meta property="og:image:width" content="400" />
+		<meta property="og:image:height" content="300" />
+
+		<link rel="stylesheet" href="./css/main.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.ico" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__row">
+					<a href="#" class="header__logo" data-aos="fade-right" data-aos-duration="1500">Content Creator</a>
+					<nav class="header__nav nav">
+						<ul class="nav__list">
+							<li><a href="#" class="active">Home</a></li>
+							<li><a href="#About-me">About me</a></li>
+							<li><a href="#Video">Video Portfolio</a></li>
+							<li><a href="#Photo">Photo Portfolio</a></li>
+						</ul>
+					</nav>
+					<div class="header__btn">
+						<div class="switch-style">
+							<span>Dark</span>
+							<div class="button-switch" id="switcher">
+								<svg class="switch" width="24" height="30" viewBox="0 0 26 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="1.5" y="1.5" width="23" height="43" rx="11.5" stroke="var(--text-color)" stroke-width="2" />
+									<circle cx="13" cy="33" r="6" fill="var(--text-color)" />
+								</svg>
+							</div>
+							<span>White</span>
+						</div>
+						<!-- Trigger/Open The Modal -->
+						<button id="myBtn">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12.3558 0.00792976C12.1328 -0.0240483 11.9087 0.0419064 11.7304 0.183809C11.5472 0.32771 11.4326 0.535567 11.4077 0.768408C11.355 1.23908 11.6946 1.66479 12.1646 1.71776C15.4063 2.07951 17.9259 4.60477 18.2904 7.85654C18.3392 8.29224 18.7047 8.62101 19.1409 8.62101C19.1738 8.62101 19.2057 8.61902 19.2385 8.61502C19.4666 8.59004 19.6697 8.47711 19.8132 8.29724C19.9556 8.11736 20.0203 7.89351 19.9944 7.66467C19.5403 3.60746 16.4002 0.45862 12.3558 0.00792976ZM12.4181 3.48994C11.942 3.402 11.5048 3.70579 11.4142 4.17047C11.3236 4.63515 11.6283 5.08884 12.0914 5.17978C13.4857 5.45159 14.5623 6.53085 14.8351 7.92989V7.93089C14.9128 8.33361 15.2674 8.62641 15.6757 8.62641C15.7305 8.62641 15.7852 8.62141 15.841 8.61142C16.3041 8.51849 16.6088 8.0658 16.5182 7.60012C16.1109 5.51055 14.5025 3.89666 12.4181 3.48994ZM14.0001 13.0905C14.4515 12.8302 14.9615 12.5362 15.6047 12.673C16.1873 12.7959 18.1731 14.4078 18.7169 14.9665C19.0734 15.3322 19.2716 15.7099 19.3025 16.0877C19.3562 17.5697 17.3425 19.2615 16.976 19.4724C16.489 19.8231 15.9224 20 15.286 20C14.6357 20 13.9106 19.8151 13.1199 19.4464C8.82956 17.6556 2.27553 11.231 0.542661 6.97395C-0.17638 5.38903 -0.18136 4.08193 0.53071 3.09961C0.814542 2.63892 2.43288 0.713245 3.88192 0.774204C4.26733 0.807181 4.64179 1.00505 5.00928 1.3648C5.56499 1.90942 7.13653 3.90106 7.25803 4.48565C7.39247 5.13521 7.09769 5.65185 6.83576 6.10554C6.7799 6.20307 6.70463 6.31881 6.62217 6.4456C6.3092 6.92683 5.89264 7.56735 6.04004 7.97626C7.09669 10.5705 9.53764 12.8339 12.133 13.8972C12.5343 14.0431 13.1745 13.6235 13.6542 13.3092C13.7791 13.2273 13.8932 13.1525 13.9893 13.0967L14.0001 13.0905Z"
+									fill="var(--text-color)"
+								/>
+							</svg>
+						</button>
+
+						<!-- The Modal -->
+						<div id="myModal" class="modal">
+							<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close">&#215;</span>
+								<div class="link__socials socials modal__socials">
+									<div class="socials__link modal__socials-link">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M12.3558 0.00792976C12.1328 -0.0240483 11.9087 0.0419064 11.7304 0.183809C11.5472 0.32771 11.4326 0.535567 11.4077 0.768408C11.355 1.23908 11.6946 1.66479 12.1646 1.71776C15.4063 2.07951 17.9259 4.60477 18.2904 7.85654C18.3392 8.29224 18.7047 8.62101 19.1409 8.62101C19.1738 8.62101 19.2057 8.61902 19.2385 8.61502C19.4666 8.59004 19.6697 8.47711 19.8132 8.29724C19.9556 8.11736 20.0203 7.89351 19.9944 7.66467C19.5403 3.60746 16.4002 0.45862 12.3558 0.00792976ZM12.4181 3.48994C11.942 3.402 11.5048 3.70579 11.4142 4.17047C11.3236 4.63515 11.6283 5.08884 12.0914 5.17978C13.4857 5.45159 14.5623 6.53085 14.8351 7.92989V7.93089C14.9128 8.33361 15.2674 8.62641 15.6757 8.62641C15.7305 8.62641 15.7852 8.62141 15.841 8.61142C16.3041 8.51849 16.6088 8.0658 16.5182 7.60012C16.1109 5.51055 14.5025 3.89666 12.4181 3.48994ZM14.0001 13.0905C14.4515 12.8302 14.9615 12.5362 15.6047 12.673C16.1873 12.7959 18.1731 14.4078 18.7169 14.9665C19.0734 15.3322 19.2716 15.7099 19.3025 16.0877C19.3562 17.5697 17.3425 19.2615 16.976 19.4724C16.489 19.8231 15.9224 20 15.286 20C14.6357 20 13.9106 19.8151 13.1199 19.4464C8.82956 17.6556 2.27553 11.231 0.542661 6.97395C-0.17638 5.38903 -0.18136 4.08193 0.53071 3.09961C0.814542 2.63892 2.43288 0.713245 3.88192 0.774204C4.26733 0.807181 4.64179 1.00505 5.00928 1.3648C5.56499 1.90942 7.13653 3.90106 7.25803 4.48565C7.39247 5.13521 7.09769 5.65185 6.83576 6.10554C6.7799 6.20307 6.70463 6.31881 6.62217 6.4456C6.3092 6.92683 5.89264 7.56735 6.04004 7.97626C7.09669 10.5705 9.53764 12.8339 12.133 13.8972C12.5343 14.0431 13.1745 13.6235 13.6542 13.3092C13.7791 13.2273 13.8932 13.1525 13.9893 13.0967L14.0001 13.0905Z"
+												fill="var(--text-color)"
+											/>
+										</svg>
+
+										<a href="tel:+380950282294">+380950282294</a>
+									</div>
+									<div class="socials__link modal__socials-link">
+										<svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M14.9394 0C16.2804 0 17.5704 0.53 18.5194 1.481C19.4694 2.43 20.0004 3.71 20.0004 5.05V12.95C20.0004 15.74 17.7304 18 14.9394 18H5.06043C2.26943 18 0.000427246 15.74 0.000427246 12.95V5.05C0.000427246 2.26 2.25943 0 5.06043 0H14.9394ZM16.5304 6.54L16.6104 6.46C16.8494 6.17 16.8494 5.75 16.5994 5.46C16.4604 5.311 16.2694 5.22 16.0704 5.2C15.8604 5.189 15.6604 5.26 15.5094 5.4L11.0004 9C10.4204 9.481 9.58943 9.481 9.00043 9L4.50043 5.4C4.18943 5.17 3.75943 5.2 3.50043 5.47C3.23043 5.74 3.20043 6.17 3.42943 6.47L3.56043 6.6L8.11043 10.15C8.67043 10.59 9.34943 10.83 10.0604 10.83C10.7694 10.83 11.4604 10.59 12.0194 10.15L16.5304 6.54Z"
+												fill="var(--text-color)"
+											/>
+										</svg>
+
+										<a href="mailto:maltsevaanastasiya0@gmail.com">maltsevaanastasiya0@gmail.com</a>
+									</div>
+									<div class="socials__link modal__socials-link">
+										<svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M11.8743 0.50961H12.3743V0.5H28.2791C34.2437 0.5 39.1261 5.48469 39.1261 11.612V28.386C39.1261 34.5136 34.2434 39.498 28.2885 39.498H11.8743C5.90839 39.498 1.01786 34.5216 1.01786 28.4052V11.6216C1.01786 5.49485 5.90919 0.50961 11.8743 0.50961ZM3.02619 11.6303V11.6312V28.4149C3.02619 33.401 6.95375 37.4316 11.8743 37.4316H28.2885C33.1917 37.4316 37.1178 33.3995 37.1178 28.3956V11.6216C37.1178 6.6174 33.1913 2.58565 28.2791 2.58565H11.8743C6.96153 2.58565 3.03611 6.61773 3.02619 11.6303ZM31.1105 7.6997C31.1105 7.10977 31.5646 6.66168 32.1147 6.66168C32.6648 6.66168 33.1189 7.10977 33.1189 7.6997C33.1189 8.28963 32.6648 8.73772 32.1147 8.73772C31.5646 8.73772 31.1105 8.28963 31.1105 7.6997ZM10.0522 20.0038C10.0522 14.3481 14.5769 9.73772 20.0814 9.73772C25.5858 9.73772 30.1105 14.3481 30.1105 20.0038C30.1105 25.6596 25.5858 30.2699 20.0814 30.2699C14.5769 30.2699 10.0522 25.6596 10.0522 20.0038ZM28.1022 20.0038C28.1022 15.4702 24.542 11.8137 20.0814 11.8137C15.6208 11.8137 12.0606 15.4702 12.0606 20.0038C12.0606 24.5374 15.6208 28.1939 20.0814 28.1939C24.542 28.1939 28.1022 24.5374 28.1022 20.0038Z"
+												fill="var(--text-color)"
+												stroke="var(--text-color)"
+											/>
+										</svg>
+
+										<a href="https://www.instagram.com/maltseva_anastasiya_/" class="link__insta">maltseva_anastasiya_</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="mobile-nav-btn">
+							<div class="nav-icon"></div>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="mobile-nav-overlay" id="mobileNavOverlay">
+				<div class="mobile-nav" id="mobileNav">
+					<ul class="mobile-nav__list">
+						<li><a href="#" class="active">Home</a></li>
+						<li><a href="#About-me">About me</a></li>
+						<li><a href="#Video">Video Portfolio</a></li>
+						<li><a href="#Photo">Photo Portfolio</a></li>
+						<li><a href="#Links">Links</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<main class="docs">
+			<div class="works">
+				<div class="works__container">
+					<div class="swiper__works">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper swiper-wrapper__works">
+							<!-- Slides -->
+
+							<div class="swiper-slide__works swiper-slide">
+								<video width="100%" height="60%" preload="auto" no-controls autoplay loop playsinline muted src="./img/works-1.webm"></video>
+							</div>
+							<div class="swiper-slide__works swiper-slide">
+								<video width="100%" height="60%" preload="auto" no-controls autoplay loop playsinline muted src="./img/works-2.webm"></video>
+							</div>
+							<div class="swiper-slide__works swiper-slide">
+								<video width="100%" height="60%" preload="auto" no-controls autoplay loop playsinline muted src="./img/works-3.webm"></video>
+							</div>
+							<div class="swiper-slide__works swiper-slide">
+								<video width="100%" height="60%" preload="auto" no-controls autoplay loop playsinline muted src="./img/works-4.webm"></video>
+							</div>
+						</div>
+					</div>
+					<div class="arrow one">
+						<picture>
+							<img src="./img/icons/arrow-down.png" alt="" />
+						</picture>
+					</div>
+				</div>
+			</div>
+			<section class="hero" id="About-me">
+				<div class="hero__container">
+					<h2 class="hero__subtitle" data-aos="fade-right" data-aos-duration="1500">About Me</h2>
+					<div class="hero__content" data-aos="fade-up" data-aos-duration="3000">
+						<h1 class="hero__title">
+							Maltseva Anastasiia
+						</h1>
+
+						<div class="hero__text">
+							Вітаю, мене звати Анастасія!
+							<p class="hero__subtext">
+								Я&#160;створюю відео-контент для брендів протягом декількох років! За&#160;цей час на&#160;моєму рахунку налічується вже десятки співпраць із
+								українськими, а&#160;також відомими світу європейськими брендами.
+							</p>
+							<p class="hero__subtext">
+								Моїми основними напрямками у&#160;роботі є beauty та&#160;food зйомки, але я&#160;завжди відкрита до&#160;цікавих викликів, творчих співпраць,
+								оригінальних проєктів та&#160;експериментів.
+							</p>
+							<p class="hero__subtext">
+								Моя задача&#160;&#8212; закохати у&#160;ваш бренд якомога більше людей за&#160;допомогою відео.
+							</p>
+
+							<p class="hero__about">VIDEOMAKER | CONTENT CREATOR</p>
+						</div>
+					</div>
+					<picture data-aos="fade-up" data-aos-duration="3000">
+						<img src="./img/Hero-foto31.webp" alt="" class="hero__foto" />
+					</picture>
+				</div>
+			</section>
+
+			<section class="portfolio-video" id="Video">
+				<div class="portfolio-video__container">
+					<h2 class="portfolio-video__title" data-aos="fade-right" data-aos-duration="1500">
+						Video Portfolio
+					</h2>
+
+					<div class="swiper__video">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-1.webp" width="100%" height="100%">
+									<source src="./img/Video/video-5.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-16.webp" width="100%" height="100%">
+									<source src="./img/Video/video-16.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-2.webp" width="100%" height="100%">
+									<source src="./img/Video/video-2.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-3.webp" width="100%" height="100%">
+									<source src="./img/Video/video-3.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-4.webp" width="100%" height="100%">
+									<source src="./img/Video/video-4.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-5.webp" width="100%" height="100%">
+									<source src="./img/Video/video-1.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-6.webp" width="100%" height="100%">
+									<source src="./img/Video/video-6.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-7.webp" width="100%" height="100%">
+									<source src="./img/Video/video-7.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-8.webp" width="100%" height="100%">
+									<source src="./img/Video/video-8.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-9.webp" width="100%" height="100%">
+									<source src="./img/Video/video-9.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-10.webp" width="100%" height="100%">
+									<source src="./img/Video/video-10.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-11.webp" width="100%" height="100%">
+									<source src="./img/Video/video-11.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-12.webp" width="100%" height="100%">
+									<source src="./img/Video/video-12.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-13.webp" width="100%" height="100%">
+									<source src="./img/Video/video-13.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-14.webp" width="100%" height="100%">
+									<source src="./img/Video/video-14.webm" type="video/mp4" />
+								</video>
+							</div>
+							<div class="swiper-slide__video slide-video swiper-slide ">
+								<video id="video" controls muted loop poster="./img/poster/poster-15.webp" width="100%" height="100%">
+									<source src="./img/Video/video-15.webm" type="video/mp4" />
+								</video>
+							</div>
+						</div>
+					</div>
+
+					<div class="slider-controls__video">
+						<div class="slider-controls__arrows-video">
+							<button id="VideoPrev">
+								<img src="./img/icons/arrow-left.svg" alt="" />
+							</button>
+							<button id="VideoNext">
+								<img src="./img/icons/arrow-right.svg" alt="" />
+							</button>
+						</div>
+						<div class="slider-controls__count-video"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="portfolio-photo" id="Photo">
+				<div class="portfolio-photo__container">
+					<h2 class="portfolio-photo__title" data-aos="fade-right" data-aos-duration="1500">Photo Portfolio</h2>
+
+					<div class="swiper__photo">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper swiper-wrapper__photo">
+							<!-- Slides -->
+
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-9.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-2.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-3.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-4.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-5.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-6.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-7.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-1.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-10.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-11.webp" alt="" />
+								</picture>
+							</div>
+
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-13.webp" alt="" />
+								</picture>
+							</div>
+
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-15.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-16.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-17.webp" alt="" />
+								</picture>
+							</div>
+
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-19.webp" alt="" />
+								</picture>
+							</div>
+							<div class="swiper-slide__photo swiper-slide">
+								<picture>
+									<img src="./img/photo-20.webp" alt="" />
+								</picture>
+							</div>
+						</div>
+					</div>
+
+					<div class="slider-controls__photo">
+						<div class="slider-controls__arrows-photo">
+							<button id="Prevphoto">
+								<img src="./img/icons/arrow-left.svg" alt="PrevPhoto" />
+							</button>
+							<button id="Nextphoto">
+								<img src="./img/icons/arrow-right.svg" alt="NextPhoto" />
+							</button>
+						</div>
+						<div class="slider-controls__count-photo"></div>
+					</div>
+				</div>
+			</section>
+			<section class="callback">
+				<div class="callback__container">
+					<h3 class="callback__title" data-aos="fade-right" data-aos-duration="1500">
+						Reviews
+					</h3>
+					<div class="callback__content">
+						<div class="swiper swiper__callback">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper swiper__callback-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-1.webp" alt="" />
+									</picture>
+								</div>
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-2.webp" alt="" />
+									</picture>
+								</div>
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-3.webp" alt="" />
+									</picture>
+								</div>
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-4.webp" alt="" />
+									</picture>
+								</div>
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-5.webp" alt="" />
+									</picture>
+								</div>
+								<div class="swiper-slide swiper__callback-slide">
+									<picture>
+										<img src="./img/callback/callback-6.webp" alt="" />
+									</picture>
+								</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper__callback-pagination"></div>
+
+							<!-- If we need navigation buttons -->
+							<div class="swiper__callback-button-prev"></div>
+							<div class="swiper__callback-button-next"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="link" id="Links">
+				<div class="link__container">
+					<h2 class="link__title" data-aos="fade-right" data-aos-duration="1500">Contact:</h2>
+
+					<div class="link__content">
+						<div class="link__socials socials">
+							<div class="socials__link" data-aos="fade-right" data-aos-duration="1000">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M12.3558 0.00792976C12.1328 -0.0240483 11.9087 0.0419064 11.7304 0.183809C11.5472 0.32771 11.4326 0.535567 11.4077 0.768408C11.355 1.23908 11.6946 1.66479 12.1646 1.71776C15.4063 2.07951 17.9259 4.60477 18.2904 7.85654C18.3392 8.29224 18.7047 8.62101 19.1409 8.62101C19.1738 8.62101 19.2057 8.61902 19.2385 8.61502C19.4666 8.59004 19.6697 8.47711 19.8132 8.29724C19.9556 8.11736 20.0203 7.89351 19.9944 7.66467C19.5403 3.60746 16.4002 0.45862 12.3558 0.00792976ZM12.4181 3.48994C11.942 3.402 11.5048 3.70579 11.4142 4.17047C11.3236 4.63515 11.6283 5.08884 12.0914 5.17978C13.4857 5.45159 14.5623 6.53085 14.8351 7.92989V7.93089C14.9128 8.33361 15.2674 8.62641 15.6757 8.62641C15.7305 8.62641 15.7852 8.62141 15.841 8.61142C16.3041 8.51849 16.6088 8.0658 16.5182 7.60012C16.1109 5.51055 14.5025 3.89666 12.4181 3.48994ZM14.0001 13.0905C14.4515 12.8302 14.9615 12.5362 15.6047 12.673C16.1873 12.7959 18.1731 14.4078 18.7169 14.9665C19.0734 15.3322 19.2716 15.7099 19.3025 16.0877C19.3562 17.5697 17.3425 19.2615 16.976 19.4724C16.489 19.8231 15.9224 20 15.286 20C14.6357 20 13.9106 19.8151 13.1199 19.4464C8.82956 17.6556 2.27553 11.231 0.542661 6.97395C-0.17638 5.38903 -0.18136 4.08193 0.53071 3.09961C0.814542 2.63892 2.43288 0.713245 3.88192 0.774204C4.26733 0.807181 4.64179 1.00505 5.00928 1.3648C5.56499 1.90942 7.13653 3.90106 7.25803 4.48565C7.39247 5.13521 7.09769 5.65185 6.83576 6.10554C6.7799 6.20307 6.70463 6.31881 6.62217 6.4456C6.3092 6.92683 5.89264 7.56735 6.04004 7.97626C7.09669 10.5705 9.53764 12.8339 12.133 13.8972C12.5343 14.0431 13.1745 13.6235 13.6542 13.3092C13.7791 13.2273 13.8932 13.1525 13.9893 13.0967L14.0001 13.0905Z"
+										fill="var(--text-color)"
+									/>
+								</svg>
+
+								<a href="tel:+380950282294">+380950282294</a>
+							</div>
+							<div class="socials__link" data-aos="fade-right" data-aos-duration="1500">
+								<svg width="20" height="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M14.9394 0C16.2804 0 17.5704 0.53 18.5194 1.481C19.4694 2.43 20.0004 3.71 20.0004 5.05V12.95C20.0004 15.74 17.7304 18 14.9394 18H5.06043C2.26943 18 0.000427246 15.74 0.000427246 12.95V5.05C0.000427246 2.26 2.25943 0 5.06043 0H14.9394ZM16.5304 6.54L16.6104 6.46C16.8494 6.17 16.8494 5.75 16.5994 5.46C16.4604 5.311 16.2694 5.22 16.0704 5.2C15.8604 5.189 15.6604 5.26 15.5094 5.4L11.0004 9C10.4204 9.481 9.58943 9.481 9.00043 9L4.50043 5.4C4.18943 5.17 3.75943 5.2 3.50043 5.47C3.23043 5.74 3.20043 6.17 3.42943 6.47L3.56043 6.6L8.11043 10.15C8.67043 10.59 9.34943 10.83 10.0604 10.83C10.7694 10.83 11.4604 10.59 12.0194 10.15L16.5304 6.54Z"
+										fill="var(--text-color)"
+									/>
+								</svg>
+
+								<a href="mailto:maltsevaanastasiya0@gmail.com">maltsevaanastasiya0@gmail.com</a>
+							</div>
+							<div class="socials__link" data-aos="fade-right" data-aos-duration="2000">
+								<svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M11.8743 0.50961H12.3743V0.5H28.2791C34.2437 0.5 39.1261 5.48469 39.1261 11.612V28.386C39.1261 34.5136 34.2434 39.498 28.2885 39.498H11.8743C5.90839 39.498 1.01786 34.5216 1.01786 28.4052V11.6216C1.01786 5.49485 5.90919 0.50961 11.8743 0.50961ZM3.02619 11.6303V11.6312V28.4149C3.02619 33.401 6.95375 37.4316 11.8743 37.4316H28.2885C33.1917 37.4316 37.1178 33.3995 37.1178 28.3956V11.6216C37.1178 6.6174 33.1913 2.58565 28.2791 2.58565H11.8743C6.96153 2.58565 3.03611 6.61773 3.02619 11.6303ZM31.1105 7.6997C31.1105 7.10977 31.5646 6.66168 32.1147 6.66168C32.6648 6.66168 33.1189 7.10977 33.1189 7.6997C33.1189 8.28963 32.6648 8.73772 32.1147 8.73772C31.5646 8.73772 31.1105 8.28963 31.1105 7.6997ZM10.0522 20.0038C10.0522 14.3481 14.5769 9.73772 20.0814 9.73772C25.5858 9.73772 30.1105 14.3481 30.1105 20.0038C30.1105 25.6596 25.5858 30.2699 20.0814 30.2699C14.5769 30.2699 10.0522 25.6596 10.0522 20.0038ZM28.1022 20.0038C28.1022 15.4702 24.542 11.8137 20.0814 11.8137C15.6208 11.8137 12.0606 15.4702 12.0606 20.0038C12.0606 24.5374 15.6208 28.1939 20.0814 28.1939C24.542 28.1939 28.1022 24.5374 28.1022 20.0038Z"
+										fill="var(--text-color)"
+										stroke="var(--text-color)"
+									/>
+								</svg>
+
+								<a href="https://www.instagram.com/maltseva_anastasiya_/" class="link__insta">maltseva_anastasiya_</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<a href="" class="footer__logo">Content Creator</a>
+				<div class="footer__row">
+					<nav class="footer__nav">
+						<ul class="footer__list">
+							<li><a href="#" class="active">Home</a></li>
+							<li><a href="#About-me">About me</a></li>
+							<li><a href="#Video">Video Portfolio</a></li>
+							<li><a href="#Photo">Photo Portfolio</a></li>
+						</ul>
+					</nav>
+				</div>
+				<p class="footer__copy">&#169; 2024 Content Creator. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="./js/index.bundle.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+	</body>
+</html>
